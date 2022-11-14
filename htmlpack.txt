@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+# Você pode escolher qualquer shell para usar no bin, por exemplo: zsh, bash, tcsh, csh e ksh;
+# È só você mudar no #!/bin/Shell-de-sua-escolha;
+
+clear
+echo ""
+echo "============= >>> HtmlPack <<< ============="
+echo ""
+echo "Criando Projeto $1..."
+
+mkdir ./$1/
+echo "Criando pastas..."
+cd ./$1/ && mkdir assets/ && cp -f ~/Documentos/packs/index.html ./ && cp -f ~/Documentos/packs/README.md ./
+cd ./assets && mkdir css/ js/ images/
+cd ./css && touch style.css && cd ..
+cd ./js && touch main.js && cd .. && cd .. && cd ..
+cd ./$1/
+echo "Pastas Criadas com Sucesso."
+# sleep 1
+cowsay "BORA CODA POHRA!!!"
+echo ""
+echo "============= >>> HtmlPack <<< ============="
+code .
+
